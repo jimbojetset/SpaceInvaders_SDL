@@ -155,3 +155,9 @@ To display the message:
    Fire and Left being pressed together.
 4. The message appears at the top of the screen, in the flying-saucer area, and
    remains visible until the demonstration finishes.
+
+## AI Usage
+
+All code in `MAINBOARD/` was written without AI assistance. 
+The non-SDL portions of `Cabinet.cs` were also written without AI assistance.
+AI assistance was used for all SDL-related code in the project.
