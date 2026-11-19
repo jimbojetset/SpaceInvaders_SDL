@@ -158,6 +158,7 @@ To display the message:
 
 ## AI Usage
 
-All code in `MAINBOARD/` was written without AI assistance. 
+All code in `MAINBOARD/` was written without AI assistance.
 The non-SDL portions of `Cabinet.cs` were also written without AI assistance.
 AI assistance was used for all SDL-related code in the project.
+AI assistance was used to produce this README file.
