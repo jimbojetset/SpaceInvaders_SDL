@@ -3,6 +3,4 @@ bin/
 obj/
 ROMS/*
 !ROMS/.gitkeep
-SOUNDS/*
-!SOUNDS/.gitkeep
 .DS_Store
