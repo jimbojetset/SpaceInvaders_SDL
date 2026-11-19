@@ -9,6 +9,11 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('OSX'))">
+    <Sdl2Library Condition="Exists('/opt/homebrew/opt/sdl2/lib/libSDL2.dylib')">/opt/homebrew/opt/sdl2/lib/libSDL2.dylib</Sdl2Library>
+    <Sdl2Library Condition="'$(Sdl2Library)' == '' and Exists('/usr/local/opt/sdl2/lib/libSDL2.dylib')">/usr/local/opt/sdl2/lib/libSDL2.dylib</Sdl2Library>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="SDL2-CS" Version="2.0.0" />
     <PackageReference Include="SFML.Net" Version="3.0.0" />
@@ -19,6 +24,19 @@
     <None Update="Cabinet.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="ROMS/**/*;SOUNDS/**/*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+    <None Include="$(Sdl2Library)" Condition="'$(Sdl2Library)' != ''" Link="libSDL2.dylib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
   </ItemGroup>
+
+  <Target Name="CheckMacSdl2" BeforeTargets="Build"
+          Condition="$([MSBuild]::IsOSPlatform('OSX')) and '$(Sdl2Library)' == ''">
+    <Error Text="SDL2 was not found. Install it with 'brew install sdl2'." />
+  </Target>
 
 </Project>

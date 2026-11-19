@@ -19,6 +19,21 @@ A cross-platform Intel 8080 Space Invaders arcade emulator built with .NET 10 C#
 
 - .NET 10 SDK
 - SDL2 library (installed via Homebrew on macOS: `brew install sdl2`)
+- Space Invaders ROM files will need to be placed in the project-root `ROMS/` folder:
+  - `invaders.h`
+  - `invaders.g`
+  - `invaders.f`
+  - `invaders.e`
+- Sound files will need to be placed in the project-root `SOUNDS/` folder:
+  - `ufo_lowpitch.wav`
+  - `shoot.wav`
+  - `invaderkilled.wav`
+  - `fastinvader1.wav`
+  - `fastinvader2.wav`
+  - `fastinvader3.wav`
+  - `fastinvader4.wav`
+  - `explosion.wav`
+  - `extendedPlay.wav`
 
 ## Build
 
