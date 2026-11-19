@@ -1,6 +1,8 @@
 # Build results
 bin/
 obj/
-ROMS/*.*
-SOUNDS/*.*
+ROMS/*
+!ROMS/.gitkeep
+SOUNDS/*
+!SOUNDS/.gitkeep
 .DS_Store
