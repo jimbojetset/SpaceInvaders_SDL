@@ -1,6 +1,6 @@
 # SpaceInvaders
 
-A cross-platform Intel 8080 Space Invaders arcade emulator built with .NET 9 C#.
+A cross-platform Intel 8080 Space Invaders arcade emulator built with .NET 10 C#.
 
 ## Features
 
@@ -17,7 +17,7 @@ A cross-platform Intel 8080 Space Invaders arcade emulator built with .NET 9 C#.
 
 ## Requirements
 
-- .NET 9 SDK
+- .NET 10 SDK
 - SDL2 library (installed via Homebrew on macOS: `brew install sdl2`)
 
 ## Build
